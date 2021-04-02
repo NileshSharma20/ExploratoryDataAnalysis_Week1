@@ -17,7 +17,7 @@ tmestm<-strptime(paste(smol$Date, smol$Time, sep=" "), "%Y-%m-%d %H:%M:%S")
 smol <- cbind(smol, tmestm)
 
 png("plot3.png",height=480,width=480)
-plot(tmestm,smol$Sub_metering_1, type="l",xlab="Days",ylab="Energy sub metering")
+plot(tmestm,smol$Sub_metering_1, type="l",xlab=" ",ylab="Energy sub metering")
 lines(tmestm,smol$Sub_metering_2, type="l",col="red")
 lines(tmestm,smol$Sub_metering_3,type="l",col="blue")
 legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),col=c("black","red","blue"),lty=1)
