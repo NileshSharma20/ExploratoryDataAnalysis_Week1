@@ -18,11 +18,11 @@ smol <- cbind(smol, tmestm)
 
 png("plot4.png",height=480,width=480)
 par(mfrow =c(2,2))
-plot(tmestm,smol$Global_active_power, type="l",xlab="Days",ylab="Global Active Power(kilowatt)")
+plot(tmestm,smol$Global_active_power, type="l",xlab=" ",ylab="Global Active Power(kilowatt)")
 
 plot(tmestm,smol$Voltage,type="l",ylab="Volatge",xlab="datetime")
 
-plot(tmestm,smol$Sub_metering_1, type="l",xlab="Days",ylab="Energy sub metering")
+plot(tmestm,smol$Sub_metering_1, type="l",xlab=" ",ylab="Energy sub metering")
 lines(tmestm,smol$Sub_metering_2, type="l",col="red")
 lines(tmestm,smol$Sub_metering_3,type="l",col="blue")
 legend("topright",inset=0.02,legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),col=c("black","red","blue"),lty=1,box.lty=0)
